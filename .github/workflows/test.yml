@@ -10,9 +10,9 @@ on:
 jobs:
   test:
     strategy:
-    matrix:
-      os: [windowslatest,macoslatest,ubuntulatest]
-      go: ["1.17","1.18","1.19","1.20"]
+      matrix:
+        os: [windowslatest,macoslatest,ubuntulatest]
+        go: ["1.17","1.18","1.19","1.20"]
     runs-on: ${{matrix.os}}
     steps:
       - uses: actions/checkout@v2
